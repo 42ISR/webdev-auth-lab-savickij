@@ -1,8 +1,8 @@
-const Input = (props) => {
+const Input = ({ label, className, ...props }) => {
     return (
         <div className="input-group">
-            {props.label && <label htmlFor="" className="input-label">{props.label}</label>}
-            <input type="text" className="input-field" {...props} />
+            {label && <label className="input-label">{label}</label>}
+            <input className={className || 'input-field'} {...props} />
         </div>
     )
 }
